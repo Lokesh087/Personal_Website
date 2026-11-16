@@ -312,7 +312,7 @@ function PageContent() {
     education: "B.Tech in CSE (AI & ML), Amrapali University",
     graduation: "2028",
     cgpa: "8.13",
-    LinkedIn: "https://www.linkedin.com/in/lokesh-pargain-4319b1283",
+    linkedin: "https://www.linkedin.com/in/lokesh-pargain-4319b1283",
     GitHub: "https://github.com/Lokesh087",
     Instagram: "https://instagram.com/lokesh_pargain_004",
     resumeUrl: "/LOKESHPARGAIN.pdf",
@@ -1222,12 +1222,7 @@ function ProjectsSection3D_Renamed({
   })
 
   const tagOptions = [
-  "all",
-  "python",
-  "spacy",
-  "nlp",
-  "ai",
-  "pypdf2",
+  "all", "python", "ai", "agents", "automation", "nlp", "next.js", "postgresql", "full-stack", "react", "javascript", "frontend", "ml", "fastapi", "git", "cli",
   ]
 
   return (
