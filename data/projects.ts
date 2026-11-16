@@ -10,39 +10,47 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    id: "1",
-    title: "AI Chat Application",
-    description: "A real-time chat application powered by AI with natural language processing capabilities. Features include user authentication, message history, and AI-powered responses.",
-    technologies: ["React", "TypeScript", "Node.js", "WebSocket", "TailwindCSS"],
-    link: "https://example.com/ai-chat",
-    github: "https://github.com/Lokesh087/ai-chat-app",
-    image: "/projects/ai-chat.png"
+    id: "aivex",
+    title: "AIVEX — Personal AI Operating System",
+    description: "A modular personal AI operating system concept designed to turn natural-language intent into useful actions and workflows.",
+    technologies: ["Python", "FastAPI", "OpenCV", "SQLite", "Multi-agent AI"],
+    github: "https://github.com/Lokesh087",
   },
   {
-    id: "2",
-    title: "Data Visualization Dashboard",
-    description: "An interactive dashboard for visualizing large datasets with real-time updates. Built with modern charting libraries and responsive design.",
-    technologies: ["React", "D3.js", "Python", "Flask", "PostgreSQL"],
-    link: "https://example.com/dashboard",
-    github: "https://github.com/Lokesh087/data-viz",
-    image: "/projects/dashboard.png"
+    id: "smart-recruiter",
+    title: "Smart AI Recruiter",
+    description: "An AI-assisted recruitment workflow that analyses resumes and assessment results, categorises applicants, and helps recruiters review candidates.",
+    technologies: ["Python", "Streamlit", "SQLite", "NLP"],
+    link: "https://smartrecruitment-hbi5ufyhh2buaxdluuwjze.streamlit.app/",
+    github: "https://github.com/Lokesh087/smart_recruitment",
   },
   {
-    id: "3",
-    title: "Machine Learning Model API",
-    description: "RESTful API for serving machine learning models with high performance. Includes model versioning, monitoring, and batch processing capabilities.",
-    technologies: ["Python", "FastAPI", "TensorFlow", "Docker", "AWS"],
-    link: "https://example.com/ml-api",
-    github: "https://github.com/Lokesh087/ml-api",
-    image: "/projects/ml-api.png"
+    id: "internflow",
+    title: "InternFlow",
+    description: "An internship workflow and management platform built around role-based access and a structured application experience.",
+    technologies: ["Next.js", "TypeScript", "PostgreSQL"],
+    github: "https://github.com/Lokesh087/InternFlow",
   },
   {
-    id: "4",
-    title: "Mobile App for Task Management",
-    description: "Cross-platform mobile application for managing tasks and projects. Features include offline support, real-time sync, and intuitive UI.",
-    technologies: ["React Native", "Firebase", "Redux", "Expo"],
-    link: "https://example.com/task-app",
-    github: "https://github.com/Lokesh087/task-app",
-    image: "/projects/task-app.png"
-  }
+    id: "smartdo",
+    title: "SmartDo — To-do List Manager",
+    description: "A task-management app for organising work, tracking priorities, and keeping daily tasks in one place.",
+    technologies: ["React", "JavaScript", "CSS"],
+    link: "https://focusfusion.vercel.app",
+    github: "https://github.com/Lokesh087/TO-DO-LIST-MANAGER",
+  },
+  {
+    id: "price-predictor",
+    title: "Price Predictor",
+    description: "A machine-learning project exploring data-driven price estimation and prediction workflows.",
+    technologies: ["Python", "Machine Learning"],
+    github: "https://github.com/Lokesh087",
+  },
+  {
+    id: "pyvcs",
+    title: "pyvcs",
+    description: "A Python-based version-control learning project exploring repository and versioning concepts.",
+    technologies: ["Python", "Git"],
+    github: "https://github.com/Lokesh087",
+  },
 ]
