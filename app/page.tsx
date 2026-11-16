@@ -801,7 +801,7 @@ function AboutSection3D({ darkMode }: { darkMode: boolean }) {
             About Me
           </h2>
           <p className={`text-xl max-w-3xl mx-auto leading-relaxed ${darkMode ? "text-slate-300" : "text-slate-700"}`}>
-            I'm a passionate developer who loves creating innovative solutions and bringing ideas to life through code.
+            I’m a third-year B.Tech Computer Science student specializing in AI & Machine Learning at Amrapali University. I enjoy building practical software, AI-powered applications, and tools that solve real problems—from full-stack products to automation and developer tooling.
           </p>
         </div>
 
@@ -809,9 +809,7 @@ function AboutSection3D({ darkMode }: { darkMode: boolean }) {
           <div className="animate-fade-in-right">
             <h3 className={`text-3xl font-bold mb-6 ${darkMode ? "text-white" : "text-slate-900"}`}>My Passion</h3>
             <p className={`mb-8 text-lg leading-relaxed ${darkMode ? "text-slate-300" : "text-slate-700"}`}>
-              I'm driven by the endless possibilities of technology and its power to solve real-world problems. Whether
-              it's building user-friendly interfaces, optimizing backend systems, or exploring new frameworks, I find
-              joy in every aspect of development.
+              My work spans full-stack development, Python, AI/ML, LLM-based workflows, and automation. I like taking an idea from problem definition to implementation, testing, and deployment—and I’m continually improving my engineering fundamentals.
             </p>
             <div className="flex flex-wrap gap-3">
               {[
@@ -847,10 +845,10 @@ function AboutSection3D({ darkMode }: { darkMode: boolean }) {
               <h3 className={`text-3xl font-bold mb-6 ${darkMode ? "text-white" : "text-slate-900"}`}>Quick Facts</h3>
               <ul className={`space-y-4 ${darkMode ? "text-slate-300" : "text-slate-700"}`}>
                 {[
-                  { color: "blue", text: "Fresher with internship in python domain" },
-                  { color: "purple", text: "5+ projects completed" },
-                  { color: "green", text: "Always learning new technologies" },
-                  { color: "orange", text: "Open source contributor" },
+                  { color: "green", text: "B.Tech CSE (AI & ML) · Amrapali University" },
+                  { color: "blue", text: "CGPA: 8.13 · Graduation: 2028" },
+                  { color: "purple", text: "AI, Python, full-stack and LLM projects" },
+                  { color: "orange", text: "Hackathon finalist and student community leadership" },
                 ].map((fact, index) => (
                   <li key={index} className="flex items-center transition-all duration-300 hover:translate-x-3 group">
                     <span
@@ -879,11 +877,11 @@ function SkillsSection3D({ darkMode }: { darkMode: boolean }) {
   icon: Code,
   color: "blue",
   skills: [
-  { name: "React", level: 75, description: "Building dynamic user interfaces" },
-  { name: "Next.js", level: 70, description: "Full-stack React framework" },
-  { name: "TypeScript", level: 65, description: "Type-safe JavaScript development" },
-  { name: "Tailwind CSS", level: 80, description: "Utility-first CSS framework" },
-  { name: "JavaScript", level: 85, description: "Core web programming language" },
+  { name: "HTML & CSS", level: 85, description: "Responsive, accessible web interfaces" },
+  { name: "JavaScript", level: 80, description: "Interactive web applications" },
+  { name: "React & Next.js", level: 75, description: "Component-driven frontend and full-stack apps" },
+  { name: "Tailwind CSS", level: 80, description: "Responsive UI styling" },
+  { name: "TypeScript", level: 65, description: "Typed JavaScript development" },
   ],
   },
   backend: {
@@ -891,11 +889,11 @@ function SkillsSection3D({ darkMode }: { darkMode: boolean }) {
   icon: Zap,
   color: "green",
   skills: [
-  { name: "Python", level: 90, description: "Primary programming language" },
-  { name: "spaCy", level: 85, description: "Advanced NLP processing" },
-  { name: "Pandas", level: 80, description: "Data manipulation and analysis" },
-  { name: "PyPDF2", level: 75, description: "PDF parsing and processing" },
-  { name: "NLP", level: 85, description: "Natural Language Processing" },
+  { name: "Python", level: 90, description: "AI, automation, scripting and backend development" },
+  { name: "FastAPI & Flask", level: 75, description: "Python web APIs and applications" },
+  { name: "SQL & PostgreSQL", level: 70, description: "Relational data modelling and queries" },
+  { name: "AI / ML & NLP", level: 75, description: "Applied machine learning and language workflows" },
+  { name: "LLM tooling", level: 70, description: "LLM evaluation, integrations and agent workflows" },
   ],
   },
   tools: {
@@ -903,11 +901,11 @@ function SkillsSection3D({ darkMode }: { darkMode: boolean }) {
   icon: Palette,
   color: "purple",
   skills: [
-  { name: "Git", level: 90, description: "Version control system" },
-  { name: "GitHub", level: 90, description: "Repository management and collaboration" },
-  { name: "Visual Studio Code", level: 85, description: "Code editor and IDE" },
-  { name: "Microsoft PowerPoint", level: 80, description: "Presentation design" },
-  { name: "Gmail", level: 75, description: "Email communication" },
+  { name: "Git & GitHub", level: 90, description: "Version control, collaboration and CI workflows" },
+  { name: "Docker", level: 65, description: "Container fundamentals and development environments" },
+  { name: "VS Code & Linux / WSL", level: 85, description: "Daily development toolchain" },
+  { name: "Vercel & Cloudflare", level: 70, description: "Deployment and cloud platform workflows" },
+  { name: "Node.js & npm", level: 75, description: "JavaScript runtime and package tooling" },
   ],
   },
   }
@@ -1055,47 +1053,18 @@ function AchievementsSection3D({ darkMode }: { darkMode: boolean }) {
 
   const achievements = {
   experience: [
-  {
-  title: "Intern - AI-based Recruitment Systems",
-  company: "Infotact Solutions",
-  period: "03/2025 – 04/2025",
-  status: "Completed",
-  description: "Developed an AI-based recruitment web application automating candidate screening using resume parsing and keyword extraction.",
-  highlights: [
-  "Implemented Python-based backend logic for parsing resumes in PDF using spaCy and PyPDF2",
-  "Led a team of 4 interns in developing an NLP-based candidate screening system",
-  "Achieved over 60% improvement in shortlisting efficiency through AI-based automation",
-  "Promoted clean code practices and peer reviews via Git and GitHub collaboration",
-  ],
-  },
+  { title: "Software / Technology Intern", company: "InProtech Solutions", period: "Internship experience", status: "Completed", description: "Hands-on experience contributing to software and technology work.", highlights: ["Worked with practical development workflows and project tasks"] },
+  { title: "Infosys Internship", company: "Infosys", period: "Internship certificate", status: "Completed", description: "Completed an Infosys learning and internship programme, with a certificate shared on LinkedIn.", highlights: ["Built on software and professional development fundamentals"] },
+  { title: "Springboard Internship 7.0", company: "Springboard", period: "Selected cohort", status: "Selected", description: "Selected for the Springboard Internship 7.0 programme.", highlights: ["Continuing structured industry-oriented learning"] },
+  { title: "PM Research Internship", company: "PM Research", period: "Selection", status: "Selected", description: "Selected for a research internship opportunity.", highlights: ["Research-focused learning and project exposure"] },
   ],
   education: [
-  {
-  title: "Bachelor of Technology",
-  company: "Amrapali University",
-  period: "08/2024 – 08/2028",
-  status: "Currently Pursuing",
-  description: "Bachelor's degree in Technology with focus on AI, ML, and Software Development.",
-  highlights: [
-  "Location: Uttarakhand, India",
-  "Strong foundation in core technical subjects and programming",
-  "Hands-on experience in Python and AI-based applications",
-  "Self-motivated learner exploring modern tech trends and innovations",
-  ],
-  },
+  { title: "B.Tech — Computer Science & Engineering (AI & ML)", company: "Amrapali University", period: "2024 – 2028", status: "Currently in third year", description: "Undergraduate programme focused on computer science, artificial intelligence and machine learning.", highlights: ["CGPA: 8.13", "Specialization: Artificial Intelligence & Machine Learning", "Expected graduation: 2028"] },
   ],
   awards: [
-  {
-  title: "AI Smart Based Recruitment System",
-  company: "Key Achievement",
-  period: "2025",
-  status: "90% Improvement",
-  description: "Achieved over 90% improvement in shortlisting efficiency during testing through AI-based automation.",
-  highlights: [
-  "Built candidate profile matching using cosine similarity and AI ranking models",
-  "Implemented secure file upload and resume parsing pipeline",
-  "Structured data storage for efficient retrieval and processing",
-  ],
+  { title: "Google Student Ambassador", company: "Google student community", period: "Student leadership", status: "Leadership", description: "Helped organize a Google Gemini seminar for junior students and supported peer learning.", highlights: ["Organized and promoted a Gemini-focused learning session"] },
+  { title: "Hack for Green Bharat", company: "Hackathon", period: "Finalist", status: "Finalist", description: "Reached finalist stage in the Hack for Green Bharat hackathon.", highlights: ["Collaborated on a technology solution for a sustainability-focused challenge"] },
+  ]
   },
   ],
   }
@@ -1236,12 +1205,12 @@ function ProjectsSection3D_Renamed({
   const { playSound: playHoverSound } = useSound("hover")
 
   const projects = [
-  {
-  title: "AI Smart Based Recruitment System",
-  description: "Developed an AI-based recruitment web application that automates candidate screening using resume parsing, keyword extraction, and cosine similarity matching. Achieved 90% improvement in shortlisting efficiency.",
-  tags: ["python", "spacy", "nlp", "ai", "pypdf2"],
-  link: "https://github.com/Lokesh087",
-  },
+  { title: "AIVEX — Personal AI Operating System", description: "A personal AI operating system concept that brings together multi-agent workflows, voice interaction, computer vision and desktop automation.", tags: ["python", "ai", "agents", "automation"], link: "https://github.com/Lokesh087" },
+  { title: "Smart AI Recruiter", description: "AI-assisted recruitment workflow for resume parsing, candidate information extraction and job-profile matching.", tags: ["python", "ai", "nlp"], link: "https://github.com/Lokesh087/smart_recruitment_ai" },
+  { title: "InternFlow", description: "A career and internship management platform built with Next.js, PostgreSQL, Drizzle and authentication tooling.", tags: ["next.js", "postgresql", "full-stack"], link: "https://github.com/Lokesh087/InternFlow" },
+  { title: "SmartDo — To-Do List Manager", description: "A task management application with a clean React interface and browser-based local storage.", tags: ["react", "javascript", "frontend"], link: "https://github.com/Lokesh087/TO-DO-LIST-MANAGER" },
+  { title: "Price Predictor", description: "A machine-learning project with a prediction pipeline and FastAPI service.", tags: ["python", "ml", "fastapi"], link: "https://github.com/Lokesh087/price_predictor" },
+  { title: "pyvcs — Version Control System", description: "A Python command-line version control project with repository and history management concepts.", tags: ["python", "git", "cli"], link: "https://github.com/Lokesh087/vcs" },
   ]
 
   const filteredProjects = projects.filter((project) => {
