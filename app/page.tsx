@@ -42,6 +42,8 @@ import {
   Eye,
   Volume2,
   VolumeX,
+  Menu,
+  X,
 } from "lucide-react"
 import Link from "next/link"
 
@@ -233,6 +235,7 @@ function MouseInteraction({ children }: { children: React.ReactNode }) {
 
 function PageContent() {
   const [activeSection, setActiveSection] = useState<Section>("home")
+  const [menuOpen, setMenuOpen] = useState(false)
   const [darkMode, setDarkMode] = useState(false)
   const [loading, setLoading] = useState(true)
   const [showScrollTop, setShowScrollTop] = useState(false)
@@ -302,10 +305,13 @@ function PageContent() {
   const personalInfo = {
     name: "Lokesh Pargain",
     initials: "LP",
-    title: "AI / Data Science — Software Development Intern",
+    title: "Computer Science Engineering Student · AI & ML · Software Developer",
     email: "pargainlokesh@gmail.com",
     phone: "918755231985",
     location: "Uttarakhand, India",
+    education: "B.Tech in CSE (AI & ML), Amrapali University",
+    graduation: "2028",
+    cgpa: "8.13",
     LinkedIn: "https://www.linkedin.com/in/lokesh-pargain-4319b1283",
     GitHub: "https://github.com/Lokesh087",
     Instagram: "https://instagram.com/lokesh_pargain_004",
@@ -349,9 +355,9 @@ function PageContent() {
           ? "bg-gradient-to-br from-slate-900 via-purple-900 to-slate-800 text-white"
           : "bg-gradient-to-br from-blue-50 via-white to-purple-50 text-slate-900"
       }`}
-      style={{ cursor: "none" }}
+
     >
-      <CustomCursor />
+
 
       {/* Enhanced Navigation */}
       <nav
@@ -370,35 +376,18 @@ function PageContent() {
               {personalInfo.name}
             </div>
 
-            {/* Enhanced Desktop Navigation */}
-            <div className="hidden lg:flex space-x-2">
-              {navItems.map((item) => {
-                const Icon = item.icon
-                return (
-                  <button
-                    key={item.id}
-                    onClick={() => handleSectionChange(item.id)}
-                    onMouseEnter={playHoverSound}
-                    title={`${item.label} (${item.shortcut})`}
-                    className={`group relative flex items-center gap-2 px-4 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 ${
-                      activeSection === item.id
-                        ? darkMode
-                          ? "bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg shadow-purple-500/25"
-                          : "bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg shadow-blue-500/25"
-                        : darkMode
-                          ? "text-slate-300 hover:text-white hover:bg-slate-800/50 hover:shadow-lg"
-                          : "text-slate-600 hover:text-slate-900 hover:bg-slate-100/80 hover:shadow-md"
-                    }`}
-                    aria-label={`Navigate to ${item.label}`}
-                  >
-                    <Icon className="h-4 w-4" />
-                    <span className="font-medium">{item.label}</span>
-                    {activeSection === item.id && (
-                      <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-current rounded-full animate-pulse" />
-                    )}
-                  </button>
-                )
-              })}
+            {/* Compact navigation menu */}
+            <div className="relative">
+              <button type="button" onClick={() => setMenuOpen((open) => !open)} aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"} aria-expanded={menuOpen}
+                className={`inline-flex items-center gap-2 rounded-xl border px-4 py-3 font-medium transition-all duration-200 ${darkMode ? "border-slate-700 bg-slate-800 text-white hover:bg-slate-700" : "border-emerald-200 bg-white text-slate-800 hover:bg-emerald-50"}`}>
+                {menuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+                <span className="hidden sm:inline">Menu</span>
+              </button>
+              {menuOpen && <div className={`absolute right-0 top-full mt-3 w-56 rounded-2xl border p-2 shadow-2xl backdrop-blur-xl ${darkMode ? "border-slate-700 bg-slate-900/95" : "border-emerald-100 bg-white/95"}`}>
+                {navItems.map((item) => { const Icon = item.icon; return <button key={item.id} onClick={() => { handleSectionChange(item.id); setMenuOpen(false) }}
+                  className={`flex w-full items-center gap-3 rounded-xl px-4 py-3 text-left transition-colors ${activeSection === item.id ? "bg-emerald-600 text-white" : darkMode ? "text-slate-200 hover:bg-slate-800" : "text-slate-700 hover:bg-emerald-50"}`}>
+                  <Icon className="h-4 w-4" /><span>{item.label}</span></button> })}
+              </div>}
             </div>
 
             {/* Enhanced Controls */}
@@ -441,44 +430,6 @@ function PageContent() {
           </div>
         </div>
       </nav>
-
-      {/* Enhanced Mobile Navigation */}
-      <div
-        className={`fixed bottom-0 left-0 right-0 lg:hidden backdrop-blur-xl border-t z-50 transition-all duration-500 ${
-          darkMode
-            ? "bg-slate-900/95 border-slate-700 shadow-2xl shadow-purple-500/10"
-            : "bg-white/95 border-slate-200 shadow-xl shadow-blue-500/10"
-        }`}
-      >
-        <div className="overflow-x-auto scrollbar-hide">
-          <div className="flex justify-start min-w-max px-2 py-2">
-            {navItems.map((item) => {
-              const Icon = item.icon
-              return (
-                <button
-                  key={item.id}
-                  onClick={() => handleSectionChange(item.id)}
-                  onMouseEnter={playHoverSound}
-                  className={`flex flex-col items-center gap-1 p-3 mx-1 rounded-xl transition-all duration-300 transform hover:scale-105 min-w-[80px] ${
-                    activeSection === item.id
-                      ? darkMode
-                        ? "text-purple-400 bg-purple-500/10"
-                        : "text-blue-600 bg-blue-500/10"
-                      : darkMode
-                        ? "text-slate-400"
-                        : "text-slate-600"
-                  }`}
-                  aria-label={`Navigate to ${item.label}`}
-                >
-                  <Icon className="h-5 w-5" />
-                  <span className="text-xs font-medium">{item.label}</span>
-                  {activeSection === item.id && <div className="w-1 h-1 bg-current rounded-full animate-pulse" />}
-                </button>
-              )
-            })}
-          </div>
-        </div>
-      </div>
 
       {/* Scroll to top button */}
       {showScrollTop && (
@@ -755,12 +706,12 @@ function HomeSection3D({
                 }`}
               >
                 <span className="w-3 h-3 bg-green-500 rounded-full mr-3 animate-pulse shadow-lg shadow-green-500/50"></span>
-                Available for work
+                Open to internships & software opportunities
               </div>
 
               <h1 className="text-5xl sm:text-7xl lg:text-8xl font-bold mb-8 leading-tight">
                 <span className={`${darkMode ? "text-white" : "text-slate-900"} block mb-2`}>Hi, I&apos;m</span>
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 animate-gradient-x block">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-700 via-green-600 to-teal-500 animate-gradient-x block">
                   {personalInfo.name}
                 </span>
               </h1>
@@ -778,7 +729,7 @@ function HomeSection3D({
                   size="lg"
                   onClick={onResumeDownload}
                   onMouseEnter={playHoverSound}
-                  className="bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 hover:from-purple-700 hover:via-pink-700 hover:to-blue-700 text-white px-10 py-6 text-xl font-semibold rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-500 transform hover:scale-105 hover:-translate-y-1"
+                  className="bg-gradient-to-r from-emerald-700 to-green-600 hover:from-emerald-800 hover:to-green-700 text-white px-10 py-6 text-xl font-semibold rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-500 transform hover:scale-105 hover:-translate-y-1"
                   aria-label="Download resume"
                 >
                   <Download className="mr-3 h-6 w-6" />
