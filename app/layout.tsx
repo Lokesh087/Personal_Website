@@ -5,8 +5,8 @@ import { AnalyticsWrapper } from './analytics'
 import './global.css'
 
 export const metadata: Metadata = {
-  title: 'Personal Website',
-  description: 'You could write something like this: "This website and its content are created and owned exclusively by Lokesh Pargain. All rights reserved.',
+  title: 'Lokesh Pargain | AI & ML Developer',
+  description: 'Lokesh Pargain — B.Tech CSE (AI & ML) student at Amrapali University, building software, AI applications and developer tools.',
   generator: 'Lokesh Pargain',
   icons: {
     icon: [
