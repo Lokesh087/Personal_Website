@@ -20,7 +20,8 @@ const skills = [
 
 const experiences = [
   { role: "Infosys Internship", detail: "Completed an internship learning experience through Infosys Springboard.", meta: "Internship" },
-  { role: "InProtech Solutions", detail: "Software development internship experience.", meta: "Internship" },
+  { role: "Infotact Solutions", detail: "Python development internship and training experience.", meta: "Internship & Training" },
+  { role: "BUIMB RESEARCH LLP", detail: "Currently working as a Software Development Engineer (SDE).", meta: "Current role" },
   { role: "Springboard Internship 7.0", detail: "Selected for the internship programme.", meta: "Selection" },
   { role: "PM Research Internship", detail: "Selected for a research internship opportunity.", meta: "Selection" },
 ]
@@ -85,7 +86,7 @@ export default function PageContent() {
             <div className="absolute -inset-4 rotate-3 rounded-[2.5rem] border border-emerald-900/10"/>
             <div className="relative overflow-hidden rounded-[2rem] bg-emerald-950 p-8 text-white shadow-2xl shadow-emerald-950/15">
               <div className="flex items-center justify-between"><Sparkles className="text-emerald-300" size={22}/><span className="text-xs tracking-[.2em] text-emerald-200/70">PROFILE / 2026</span></div>
-              <div className="mt-10 overflow-hidden rounded-[1.6rem] border border-white/15 bg-white/10"><img src="/profile-lokesh.webp" alt="Lokesh Pargain" className="h-[22rem] w-full object-cover object-top" /></div>
+              <div className="mt-10 overflow-hidden rounded-[1.6rem] border border-white/15 bg-white/10"><img src="/profile-lokesh.jpg" alt="Lokesh Pargain" className="h-[22rem] w-full object-cover object-top" /></div>
               <p className="mt-9 text-2xl font-semibold">Curious by nature.</p>
               <p className="mt-2 text-2xl font-semibold text-emerald-300">Builder by choice.</p>
               <div className="mt-10 grid grid-cols-2 gap-4 border-t border-white/15 pt-6">
