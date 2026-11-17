@@ -25,7 +25,7 @@ const experiences = [
   { role: "PM Research Internship", detail: "Selected for a research internship opportunity.", meta: "Selection" },
 ]
 
-const nav = ["About", "Skills", "Experience", "Projects", "Contact"]
+const nav = ["About", "Skills", "Experience", "Projects", "Certificates", "Contact"]
 
 export default function PageContent() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -71,6 +71,7 @@ export default function PageContent() {
             <div className="mt-9 flex flex-wrap gap-3">
               <a href="#projects" className="inline-flex items-center gap-2 rounded-full bg-emerald-900 px-6 py-3.5 text-sm font-medium text-white shadow-lg shadow-emerald-950/10 transition hover:-translate-y-0.5 hover:bg-emerald-800">Explore my work <ArrowUpRight size={17}/></a>
               <a href="mailto:pargainlokesh@gmail.com" className="inline-flex items-center gap-2 rounded-full border border-emerald-900/15 bg-white/70 px-6 py-3.5 text-sm font-medium text-emerald-950 transition hover:border-emerald-800">Get in touch <ArrowDownRight size={17}/></a>
+              <a href="/resume.pdf" download className="inline-flex items-center gap-2 rounded-full border border-emerald-900/15 bg-white px-6 py-3.5 text-sm font-medium text-emerald-950 transition hover:border-emerald-800">Download resume <ArrowDownRight size={17}/></a>
             </div>
             <div className="mt-10 flex items-center gap-5 text-[#738178]">
               <a aria-label="GitHub" href="https://github.com/Lokesh087" target="_blank" rel="noreferrer" className="transition hover:text-emerald-800"><Github size={20}/></a>
@@ -84,7 +85,7 @@ export default function PageContent() {
             <div className="absolute -inset-4 rotate-3 rounded-[2.5rem] border border-emerald-900/10"/>
             <div className="relative overflow-hidden rounded-[2rem] bg-emerald-950 p-8 text-white shadow-2xl shadow-emerald-950/15">
               <div className="flex items-center justify-between"><Sparkles className="text-emerald-300" size={22}/><span className="text-xs tracking-[.2em] text-emerald-200/70">PROFILE / 2026</span></div>
-              <div className="mt-16 grid h-32 w-32 place-items-center rounded-[2rem] border border-white/15 bg-white/10 text-5xl font-semibold tracking-tight">LP</div>
+              <div className="mt-10 overflow-hidden rounded-[1.6rem] border border-white/15 bg-white/10"><img src="/profile-lokesh.webp" alt="Lokesh Pargain" className="h-[22rem] w-full object-cover object-top" /></div>
               <p className="mt-9 text-2xl font-semibold">Curious by nature.</p>
               <p className="mt-2 text-2xl font-semibold text-emerald-300">Builder by choice.</p>
               <div className="mt-10 grid grid-cols-2 gap-4 border-t border-white/15 pt-6">
@@ -139,6 +140,24 @@ export default function PageContent() {
             <div className="mt-6 flex flex-wrap gap-2">{project.stack.map((tech) => <span key={tech} className="text-xs text-emerald-800">{tech}</span>)}</div>
             <a href={project.href} target="_blank" rel="noreferrer" className="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-emerald-900">View project <ExternalLink size={15} className="transition group-hover:translate-x-1"/></a>
           </article>)}
+        </div>
+      </section>
+
+
+      <section id="certificates" className="border-y border-emerald-950/10 bg-white py-20">
+        <div className="mx-auto max-w-6xl px-5 sm:px-8">
+          <div className="mb-10 flex flex-wrap items-end justify-between gap-6">
+            <div><p className="text-xs font-semibold uppercase tracking-[.22em] text-emerald-700">05 / Proof of learning</p><h2 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">Certificates & resume.</h2><p className="mt-4 max-w-2xl leading-7 text-[#718077]">A selection of internship, training, and learning credentials. Open any certificate to view the original document.</p></div>
+            <div className="flex flex-wrap gap-3"><a href="/resume.pdf" download className="inline-flex items-center gap-2 rounded-full bg-emerald-900 px-5 py-3 text-sm font-medium text-white hover:bg-emerald-800">Download resume <ArrowDownRight size={16}/></a><a href="/resume.pdf" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full border border-emerald-900/15 px-5 py-3 text-sm font-medium text-emerald-950 hover:border-emerald-800">View resume <ExternalLink size={15}/></a></div>
+          </div>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              {title:"Infosys Springboard",subtitle:"Internship 7.0 · AI-Powered Dynamic Pricing",file:"/certificates/infosys-internship.pdf",kind:"Internship completion"},
+              {title:"Infotact Solutions",subtitle:"Python Development",file:"/certificates/infotact-python-internship.pdf",kind:"Internship"},
+              {title:"Infotact Solutions",subtitle:"Python Development",file:"/certificates/infotact-python-training.pdf",kind:"Training"},
+              {title:"GeeksforGeeks · Nation SkillUp",subtitle:"Agentic AI – Skill Up",file:"/certificates/agentic-ai-skillup.pdf",kind:"Course completion"},
+            ].map((item)=><article key={item.file} className="flex flex-col rounded-3xl border border-emerald-950/10 bg-[#fbfdfb] p-6 transition hover:-translate-y-1 hover:shadow-lg hover:shadow-emerald-950/5"><span className="w-fit rounded-full bg-emerald-50 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-emerald-800">{item.kind}</span><h3 className="mt-5 text-lg font-semibold">{item.title}</h3><p className="mt-2 min-h-12 text-sm leading-6 text-[#718077]">{item.subtitle}</p><a href={item.file} target="_blank" rel="noreferrer" className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-emerald-900">View certificate <ExternalLink size={15}/></a></article>)}
+          </div>
         </div>
       </section>
 
